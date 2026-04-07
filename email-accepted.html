@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RSVP Confirmed — Dianne & Darren</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
+  body { margin:0; padding:0; background:#EDF3FA; font-family:'Jost',Arial,sans-serif; }
+  .wrap { max-width:580px; margin:0 auto; background:#ffffff; }
+  .header {
+    background: linear-gradient(160deg,#C5D8EE 0%,#9BBADE 60%,#7A9DC8 100%);
+    padding:48px 40px 40px; text-align:center;
+  }
+  .ornament { font-size:11px; letter-spacing:5px; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:16px; }
+  .script-names { font-family:'Cormorant Garamond',Georgia,serif; font-size:52px; color:white; font-weight:300; line-height:1.1; margin-bottom:8px; }
+  .header-date { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.8); }
+  .blue-strip { background:#5A7DB0; height:4px; }
+  .body { padding:44px 40px; }
+  .greeting { font-family:'Cormorant Garamond',Georgia,serif; font-size:26px; color:#2C4872; margin-bottom:6px; font-weight:400; }
+  .subline { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:17px; color:#7A9DC8; margin-bottom:28px; }
+  .body-text { font-size:14px; color:#4A6080; line-height:1.85; font-weight:300; margin-bottom:24px; }
+  .divider { border:none; border-top:1px solid #C5D8EE; margin:28px 0; }
+  .details-box {
+    background:#EDF3FA; border:1px solid #C5D8EE; border-radius:4px;
+    padding:24px 28px; margin-bottom:28px;
+  }
+  .details-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#9BBADE; margin-bottom:16px; }
+  .detail-row { display:flex; align-items:flex-start; margin-bottom:14px; gap:14px; }
+  .detail-row:last-child { margin-bottom:0; }
+  .detail-icon { font-size:18px; flex-shrink:0; margin-top:2px; }
+  .detail-main { font-family:'Cormorant Garamond',Georgia,serif; font-size:16px; color:#2C4872; font-weight:500; }
+  .detail-sub { font-size:12px; color:#7A9DC8; letter-spacing:0.5px; margin-top:2px; }
+  .rsvp-summary {
+    background:white; border:1px solid #C5D8EE; border-radius:4px;
+    padding:20px 24px; margin-bottom:28px;
+  }
+  .summary-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#9BBADE; margin-bottom:14px; }
+  .summary-row { display:flex; justify-content:space-between; margin-bottom:8px; font-size:13px; }
+  .summary-key { color:#7A9DC8; font-weight:300; }
+  .summary-val { color:#2C4872; font-weight:400; }
+  .quote-block {
+    text-align:center; padding:24px 20px;
+    border-top:1px solid #C5D8EE; border-bottom:1px solid #C5D8EE;
+    margin-bottom:28px;
+  }
+  .quote-text { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:18px; color:#5A7DB0; line-height:1.7; }
+  .quote-src { font-size:11px; color:#9BBADE; letter-spacing:2px; margin-top:10px; }
+  .cta-text { font-size:14px; color:#4A6080; line-height:1.85; font-weight:300; margin-bottom:8px; }
+  .footer {
+    background:#3A5A8A; padding:32px 40px; text-align:center;
+  }
+  .footer-script { font-family:'Cormorant Garamond',Georgia,serif; font-size:32px; color:rgba(255,255,255,0.9); margin-bottom:6px; }
+  .footer-date-line { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:16px; }
+  .footer-note { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:13px; color:rgba(255,255,255,0.35); }
+  @media (max-width:480px) {
+    .header { padding:36px 24px 32px; }
+    .body { padding:32px 24px; }
+    .footer { padding:24px; }
+    .script-names { font-size:40px; }
+    .summary-row { flex-direction:column; gap:2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <p class="ornament">✦ &nbsp; You're Invited &nbsp; ✦</p>
+    <div class="script-names">Dianne<br>&amp; Darren</div>
+    <p class="header-date">May 2, 2026 · Cagayan de Oro City</p>
+  </div>
+  <div class="blue-strip"></div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <p class="greeting">Dear {{to_name}},</p>
+    <p class="subline">We are so happy you'll be celebrating with us.</p>
+
+    <p class="body-text">
+      Your RSVP has been received and we are absolutely overjoyed to know that you will be
+      joining us on one of the most important days of our lives. We can't wait to share
+      every moment of it with you.
+    </p>
+
+    <hr class="divider"/>
+
+    <!-- WEDDING DETAILS -->
+    <div class="details-box">
+      <p class="details-label">Wedding Details</p>
+
+      <div class="detail-row">
+        <span class="detail-icon">⛪</span>
+        <div>
+          <div class="detail-main">Holy Ceremony</div>
+          <div class="detail-sub">San Vicente Ferrer Parish · Cugman, CDO</div>
+          <div class="detail-sub">May 2, 2026 · 2:00 PM</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-icon">🥂</span>
+        <div>
+          <div class="detail-main">Reception</div>
+          <div class="detail-sub">Marco Hotel · Cugman, CDO</div>
+          <div class="detail-sub">Immediately following the ceremony</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-icon">👗</span>
+        <div>
+          <div class="detail-main">Dress Code — Formal</div>
+          <div class="detail-sub">Motif: Shades of Blue</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-icon">📍</span>
+        <div>
+          <div class="detail-main">Getting There</div>
+          <div class="detail-sub">Cugman is accessible via RORO or ride from CDO city proper. Parking available at venue.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RSVP SUMMARY -->
+    <div class="rsvp-summary">
+      <p class="summary-label">Your RSVP Summary</p>
+      <div class="summary-row">
+        <span class="summary-key">Name</span>
+        <span class="summary-val">{{to_name}}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Attending</span>
+        <span class="summary-val" style="color:#3A7A5A;">✓ Accepted</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Number of guests</span>
+        <span class="summary-val">{{guest_count}}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Meal preference</span>
+        <span class="summary-val">{{meal}}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Dietary notes</span>
+        <span class="summary-val">{{dietary}}</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Song request</span>
+        <span class="summary-val">{{song}}</span>
+      </div>
+    </div>
+
+    <!-- SCRIPTURE QUOTE -->
+    <div class="quote-block">
+      <p class="quote-text">"I have found the one whom my soul loves."</p>
+      <p class="quote-src">— Song of Solomon 3:4</p>
+    </div>
+
+    <p class="cta-text">
+      If you have any questions leading up to the big day, please don't hesitate to reach out.
+      We are so grateful to have you in our lives and cannot wait to celebrate with you.
+    </p>
+    <p class="cta-text">With all our love,</p>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:28px; color:#2C4872; margin-top:8px;">Dianne & Darren</p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-script">Dianne & Darren</div>
+    <div class="footer-date-line">May 2, 2026 · Cagayan de Oro City</div>
+    <div style="width:30px;height:1px;background:rgba(255,255,255,0.2);margin:0 auto 16px;"></div>
+    <p class="footer-note">Made with love for the people we love most.</p>
+  </div>
+
+</div>
+</body>
+</html>

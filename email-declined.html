@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>We'll Miss You — Dianne & Darren</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap');
+  body { margin:0; padding:0; background:#EDF3FA; font-family:'Jost',Arial,sans-serif; }
+  .wrap { max-width:580px; margin:0 auto; background:#ffffff; }
+  .header {
+    background: linear-gradient(160deg,#8AAAC8 0%,#7A9DC8 50%,#5A7DB0 100%);
+    padding:48px 40px 40px; text-align:center;
+  }
+  .ornament { font-size:11px; letter-spacing:5px; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:16px; }
+  .script-names { font-family:'Cormorant Garamond',Georgia,serif; font-size:52px; color:white; font-weight:300; line-height:1.1; margin-bottom:8px; }
+  .header-sub { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.85); }
+  .blue-strip { background:#3A5A8A; height:4px; }
+  .body { padding:44px 40px; }
+  .greeting { font-family:'Cormorant Garamond',Georgia,serif; font-size:26px; color:#2C4872; margin-bottom:6px; font-weight:400; }
+  .subline { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:17px; color:#7A9DC8; margin-bottom:28px; }
+  .body-text { font-size:14px; color:#4A6080; line-height:1.85; font-weight:300; margin-bottom:24px; }
+  .divider { border:none; border-top:1px solid #C5D8EE; margin:28px 0; }
+  .miss-box {
+    background:#EDF3FA; border:1px solid #C5D8EE; border-radius:4px;
+    padding:28px; text-align:center; margin-bottom:28px;
+  }
+  .miss-icon { font-size:36px; margin-bottom:12px; }
+  .miss-text { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:20px; color:#5A7DB0; line-height:1.65; }
+  .note-box {
+    background:white; border-left:3px solid #9BBADE;
+    padding:18px 22px; margin-bottom:28px; border-radius:0 4px 4px 0;
+  }
+  .note-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#9BBADE; margin-bottom:8px; }
+  .note-text { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:16px; color:#4A6080; line-height:1.7; }
+  .quote-block {
+    text-align:center; padding:24px 20px;
+    border-top:1px solid #C5D8EE; border-bottom:1px solid #C5D8EE;
+    margin-bottom:28px;
+  }
+  .quote-text { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:18px; color:#5A7DB0; line-height:1.7; }
+  .quote-src { font-size:11px; color:#9BBADE; letter-spacing:2px; margin-top:10px; }
+  .footer { background:#3A5A8A; padding:32px 40px; text-align:center; }
+  .footer-script { font-family:'Cormorant Garamond',Georgia,serif; font-size:32px; color:rgba(255,255,255,0.9); margin-bottom:6px; }
+  .footer-date-line { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:16px; }
+  .footer-note { font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:13px; color:rgba(255,255,255,0.35); }
+  @media (max-width:480px) {
+    .header { padding:36px 24px 32px; }
+    .body { padding:32px 24px; }
+    .footer { padding:24px; }
+    .script-names { font-size:40px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <p class="ornament">💙 &nbsp; We'll Miss You &nbsp; 💙</p>
+    <div class="script-names">Dianne<br>&amp; Darren</div>
+    <p class="header-sub">May 2, 2026 · Cagayan de Oro City</p>
+  </div>
+  <div class="blue-strip"></div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <p class="greeting">Dear {{to_name}},</p>
+    <p class="subline">Thank you for letting us know.</p>
+
+    <p class="body-text">
+      We completely understand that life doesn't always make it possible to be there in person,
+      and we are truly grateful that you took the time to let us know. Your love and support mean
+      the world to us, even across the distance.
+    </p>
+
+    <!-- MISS YOU BOX -->
+    <div class="miss-box">
+      <div class="miss-icon">🌸</div>
+      <p class="miss-text">
+        You will be in our hearts and thoughts<br>on this beautiful day — always.
+      </p>
+    </div>
+
+    <!-- THEIR NOTE (if any) -->
+    <div class="note-box" id="noteSection">
+      <p class="note-label">Your Message to Us</p>
+      <p class="note-text">"{{note}}"</p>
+    </div>
+
+    <hr class="divider"/>
+
+    <p class="body-text">
+      Although you won't be with us physically, we hope to celebrate with you in other ways very soon.
+      Please know how much your friendship and love mean to both of us.
+    </p>
+
+    <!-- QUOTE -->
+    <div class="quote-block">
+      <p class="quote-text">"Love bears all things, believes all things,<br>hopes all things, endures all things."</p>
+      <p class="quote-src">— 1 Corinthians 13:7</p>
+    </div>
+
+    <p class="body-text">
+      With gratitude and all our love,
+    </p>
+    <p style="font-family:'Cormorant Garamond',Georgia,serif; font-size:28px; color:#2C4872; margin-top:8px;">Dianne & Darren</p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-script">Dianne & Darren</div>
+    <div class="footer-date-line">May 2, 2026 · Cagayan de Oro City</div>
+    <div style="width:30px;height:1px;background:rgba(255,255,255,0.2);margin:0 auto 16px;"></div>
+    <p class="footer-note">Made with love for the people we love most.</p>
+  </div>
+
+</div>
+</body>
+</html>
