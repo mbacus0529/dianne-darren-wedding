@@ -440,36 +440,36 @@ footer{background:var(--blue-deep);padding:3.5rem 2rem;text-align:center;}
         <span class="gdrive-btn outline">Open Album →</span>
       </div>
       <div class="gdrive-card fade-up d2" onclick="openMegaUpload()">
-        <div class="gdrive-card-icon">📤</div>
-        <div class="gdrive-card-title">Upload Your Photos</div>
-        <div class="gdrive-card-sub">Add your photos and videos instantly — <strong style="font-style:normal;color:var(--blue-5);">no Mega account required!</strong></div>
-        <span class="gdrive-btn">Upload Now →</span>
+        <div class="gdrive-card-icon">📸</div>
+        <div class="gdrive-card-title">Add Your Photos</div>
+        <div class="gdrive-card-sub">Upload your photos and videos to our shared Google Photos album — <strong style="font-style:normal;color:var(--blue-5);">no account required!</strong></div>
+        <span class="gdrive-btn">Add Photos →</span>
       </div>
     </div>
 
     <div class="gdrive-steps fade-up d2">
       <div class="gdrive-step">
         <div class="gdrive-step-num">1</div>
-        <div class="gdrive-step-text">Click <strong>"Upload Your Photos"</strong> above</div>
+        <div class="gdrive-step-text">Click <strong>"Add Your Photos"</strong> above</div>
       </div>
       <div class="gdrive-step">
         <div class="gdrive-step-num">2</div>
-        <div class="gdrive-step-text">Mega opens in your browser — <strong>no sign-in needed</strong></div>
+        <div class="gdrive-step-text">Google Photos opens — tap <strong>"Add photos"</strong> button</div>
       </div>
       <div class="gdrive-step">
         <div class="gdrive-step-num">3</div>
-        <div class="gdrive-step-text">Click <strong>"Select files"</strong> or drag your photos & videos in</div>
+        <div class="gdrive-step-text">Select photos or videos from your <strong>phone or camera roll</strong></div>
       </div>
       <div class="gdrive-step">
         <div class="gdrive-step-num">4</div>
-        <div class="gdrive-step-text">Done! Your files go straight into <strong>our shared album</strong></div>
+        <div class="gdrive-step-text">Done! Your photos appear in <strong>our shared wedding album</strong></div>
       </div>
     </div>
 
     <p class="gdrive-note fade-up d3">
-      Accepts photos, videos, and any file format &nbsp;·&nbsp;
+      Powered by Google Photos &nbsp;·&nbsp;
       <strong>No account required</strong> &nbsp;·&nbsp;
-      Encrypted & secure via Mega
+      Photos & videos welcome
     </p>
   </div>
 </div>
@@ -717,16 +717,9 @@ async function sendEmail(d){
 // Replace these with your actual Mega links
 // View link: mega.nz → folder → Share → copy link (view only)
 // Upload link: mega.nz → folder → Share → enable Upload → copy upload link
-const MEGA_VIEW_LINK='https://photos.app.goo.gl/r5pgJvP7QHBDATYs9';
-const MEGA_UPLOAD_LINK='https://photos.app.goo.gl/r5pgJvP7QHBDATYs9';
-function openMegaView(){
-  if(MEGA_VIEW_LINK==='https://photos.app.goo.gl/r5pgJvP7QHBDATYs9'){showToast('Album link not set up yet.');return;}
-  window.open(MEGA_VIEW_LINK,'_blank');
-}
-function openMegaUpload(){
-  if(MEGA_UPLOAD_LINK==='https://photos.app.goo.gl/r5pgJvP7QHBDATYs9'){showToast('Upload link not set up yet.');return;}
-  window.open(MEGA_UPLOAD_LINK,'_blank');
-}
+const GOOGLE_PHOTOS_LINK='https://photos.app.goo.gl/r5pgJvP7QHBDATYs9';
+function openMegaView(){ window.open(GOOGLE_PHOTOS_LINK,'_blank'); }
+function openMegaUpload(){ window.open(GOOGLE_PHOTOS_LINK,'_blank'); }
 
 function resetForm(){
   document.getElementById('formCard').style.display='block';
